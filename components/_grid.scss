@@ -1,0 +1,48 @@
+.#{$containerClass}{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing:border-box;
+
+  @each $name, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      width: map-get($container, $name);
+    }
+  }
+}
+
+.#{$gridClass}{
+  position: relative;
+  @include respond(xs){
+    // Fix to prevent row negative margin causing overflow when width = viewport width
+    overflow: hidden;
+  }
+}
+
+.#{$rowClass}{
+  margin: 0 -#{$gutter};
+  font-size: 0;
+
+  @include respond(sm){
+    margin: 0 -#{$gutter};
+  }
+
+  &:before,&:after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+}
+
+.#{$columnClass}{
+  font-size: 1rem;
+  position: relative;
+  padding: 0 $gutter;
+  text-align: left;
+  display: block;
+
+  @include respond(sm){
+    display: inline-block;
+    padding: 0 -#{$gutter};
+  }
+}

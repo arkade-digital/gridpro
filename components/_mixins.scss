@@ -1,0 +1,25 @@
+// GRID MAKER 9000 //
+@each $name, $breakpoint in $breakpoints {
+  @media (min-width: $breakpoint) {
+    $col-size : 1;
+    @while $col-size <= $grid-size{
+      .#{$columnClassPrefix}#{$name}-#{$col-size}{
+        width: ($col-size / $grid-size) * 100%;
+      }
+      $col-size : $col-size + 1;
+    }
+  }
+}
+
+// BREAKPOINT MAKER 9000 //
+@mixin respond($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media (max-width: #{map-get($breakpoints, 'sm') - 1}) {
+      @content;
+    }
+  }@else{
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
