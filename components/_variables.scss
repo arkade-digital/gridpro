@@ -1,12 +1,12 @@
-$containerClass: 'container';
-$gridClass: 'grid';
-$rowClass: 'row';
-$columnClass: 'col';
-$columnClassPrefix: 'col-';
+$containerClass: 'container' !default;
+$gridClass: 'grid' !default;
+$rowClass: 'row' !default;
+$columnClass: 'col' !default;
+$columnClassPrefix: 'col-' !default;
 
-$grid-size: 12;
-$padding: 15px;
-$gutter: 10px;
+$grid-size: 12 !default;
+$padding: 15px !default;
+$gutter: 10px !default;
 
 $breakpoints: (
   xs: 0,
@@ -14,7 +14,7 @@ $breakpoints: (
   md: 992px,
   lg: 1200px,
   xl: 1800px
-);
+) !default;
 
 $container: (
   xs: auto,
@@ -22,4 +22,4 @@ $container: (
   md: 840px,
   lg: 1180px,
   xl: 1600px
-);
+) !default;
