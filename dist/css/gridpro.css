@@ -129,10 +129,10 @@
     width: 100%; } }
 
 .container {
+  box-sizing: border-box;
   display: block;
   margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box; }
+  margin-right: auto; }
   @media (min-width: 0) {
     .container {
       width: auto; } }
@@ -156,22 +156,22 @@
       overflow: hidden; } }
 
 .row {
-  margin: 0 -10px;
-  font-size: 0; }
+  font-size: 0;
+  margin: 0 -10px; }
   @media (min-width: 768px) {
     .row {
       margin: 0 -10px; } }
   .row:before, .row:after {
+    clear: both;
     content: '';
-    display: block;
-    clear: both; }
+    display: block; }
 
 .col {
+  display: block;
   font-size: 1rem;
-  position: relative;
   padding: 0 10px;
-  text-align: left;
-  display: block; }
+  position: relative;
+  text-align: left; }
   @media (min-width: 768px) {
     .col {
       display: inline-block;

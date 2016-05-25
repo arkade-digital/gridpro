@@ -1,8 +1,8 @@
-.#{$containerClass}{
+.#{$container-class} {
+  box-sizing: border-box;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  box-sizing:border-box;
 
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
@@ -11,38 +11,40 @@
   }
 }
 
-.#{$gridClass}{
-  position: relative;
-  @include respond(xs){
-    // Fix to prevent row negative margin causing overflow when width = viewport width
+.#{$grid-class} {
+  // Fix to prevent row negative margin causing overflow when width = viewport width
+  @include respond(xs) {
     overflow: hidden;
   }
-}
 
-.#{$rowClass}{
-  margin: 0 -#{$gutter};
-  font-size: 0;
-
-  @include respond(sm){
-    margin: 0 -#{$gutter};
-  }
-
-  &:before,&:after{
-    content:'';
-    display: block;
-    clear: both;
-  }
-}
-
-.#{$columnClass}{
-  font-size: 1rem;
   position: relative;
-  padding: 0 $gutter;
-  text-align: left;
-  display: block;
+}
 
-  @include respond(sm){
-    display: inline-block;
-    padding: 0 -#{$gutter};
+.#{$row-class} {
+  @include respond(sm) {
+    margin: 0 #{'-' + $gutter};
   }
+
+  font-size: 0;
+  margin: 0 #{'-' + $gutter};
+
+  &:before,
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.#{$column-class} {
+  @include respond(sm) {
+    display: inline-block;
+    padding: 0 #{'-' + $gutter};
+  }
+
+  display: block;
+  font-size: 1rem;
+  padding: 0 $gutter;
+  position: relative;
+  text-align: left;
 }
