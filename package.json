@@ -1,10 +1,29 @@
 {
   "name": "gridpro",
   "license": "MIT",
+  "description": "A Bootstrap-compatible, extensible grid framework for the saavy frontend developer",
   "repository": {
     "type": "git",
     "url": "https://github.com/arkadedigital/gridpro.git"
   },
+  "contributors": [
+    {
+      "name": "James Hunt",
+      "email": "jamesh@arkade.com.au"
+    },
+    {
+      "name": "Thai Phan",
+      "email": "thai@arkade.com.au"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/arkadedigital/gridpro/issues"
+  },
+  "keywords": [
+    "css",
+    "bootstrap",
+    "grid"
+  ],
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.8",
