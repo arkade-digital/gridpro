@@ -1,6 +1,7 @@
 {
   "name": "gridpro",
   "license": "MIT",
+  "version": "0.1.0",
   "description": "A Bootstrap-compatible, extensible grid framework for the saavy frontend developer",
   "repository": {
     "type": "git",
